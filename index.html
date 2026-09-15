@@ -3,464 +3,595 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Profesional | Creative Developer</title>
+    <meta name="description" content="Matías Ezequiel González — Full-Stack Developer & AI Product Builder. Construyo productos digitales modernos combinando ingeniería, IA y diseño.">
+    <meta name="author" content="Matías Ezequiel González">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Ezequiell-26/">
+    <meta property="og:title" content="Matías Ezequiel González — Full-Stack Developer & AI Product Builder">
+    <meta property="og:description" content="Construyo productos digitales modernos combinando ingeniería, IA y experiencias interactivas.">
+    <meta property="og:image" content="https://og-image.vercel.app/Matias%20Ezequiel%20Gonzalez.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/Ezequiell-26/">
+    <meta property="twitter:title" content="Matías Ezequiel González — Full-Stack Developer & AI Product Builder">
+    <meta property="twitter:description" content="Construyo productos digitales modernos combinando ingeniería, IA y experiencias interactivas.">
+    <meta property="twitter:image" content="https://og-image.vercel.app/Matias%20Ezequiel%20Gonzalez.png">
+
+    <title>Matías Ezequiel González — Full-Stack Developer & AI Product Builder</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 </head>
 <body>
-    <!-- Canvas 3D Background -->
+    <!-- Canvas Background Optimizado -->
     <canvas id="bg-canvas"></canvas>
     
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loader">
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-        </div>
-        <p>Cargando experiencia...</p>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <span class="logo-text">PORTFOLIO</span>
+            <a href="#home" class="logo-text">MG</a>
         </div>
         <ul class="nav-links">
-            <li><a href="#home" data-text="Inicio">Inicio</a></li>
-            <li><a href="#about" data-text="Sobre Mí">Sobre Mí</a></li>
-            <li><a href="#skills" data-text="Habilidades">Habilidades</a></li>
-            <li><a href="#projects" data-text="Proyectos">Proyectos</a></li>
-            <li><a href="#contact" data-text="Contacto">Contacto</a></li>
+            <li><a href="#home" class="nav-link active">Inicio</a></li>
+            <li><a href="#about" class="nav-link">Sobre mí</a></li>
+            <li><a href="#stack" class="nav-link">Stack</a></li>
+            <li><a href="#projects" class="nav-link">Proyectos</a></li>
+            <li><a href="#experience" class="nav-link">Experiencia</a></li>
+            <li><a href="#contact" class="nav-link">Contacto</a></li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+        <button class="burger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="glitch" data-text="Creative Developer">
-                    <span class="hero-title">Creative</span>
-                    <span class="hero-title highlight">Developer</span>
-                </h1>
-                <p class="hero-subtitle">Transformando ideas en experiencias digitales extraordinarias</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>Ver Proyectos</span>
-                        <i class="fas fa-arrow-right"></i>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Disponible para proyectos</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Matías Ezequiel González
+                    </h1>
+                    <p class="hero-subtitle">
+                        Full-Stack Developer · AI Product Builder
+                    </p>
+                    <p class="hero-description">
+                        Construyo productos digitales modernos combinando ingeniería de software, inteligencia artificial y experiencias interactivas que generan impacto real.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Ver proyectos</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contactarme</span>
+                        </a>
+                    </div>
+                    <div class="tech-indicators">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI APIs</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </span>
+                            <span class="code-title">developer.ts</span>
+                        </div>
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Matías Ezequiel González'</span>,
+  <span class="property">role</span>: <span class="string">'Full-Stack Developer'</span>,
+  <span class="property">focus</span>: [<span class="string">'AI Products'</span>, <span class="string">'Web Apps'</span>],
+  <span class="property">passion</span>: <span class="string">'Building impactful solutions'</span>,
+  <span class="property">available</span>: <span class="boolean">true</span>
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">01.</span>
+                    Sobre mí
+                </h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            Soy un desarrollador full-stack apasionado por crear productos digitales que resuelven problemas reales. Mi enfoque combina fundamentos sólidos de ingeniería con las últimas tecnologías en IA y desarrollo web moderno.
+                        </p>
+                        <p>
+                            Me especializo en transformar ideas complejas en aplicaciones funcionales y escalables. Desde el backend hasta el frontend, pasando por la integración de inteligencia artificial, disfruto de cada etapa del proceso de construcción de software.
+                        </p>
+                        <p>
+                            Actualmente estoy enfocado en desarrollar productos que utilicen IA de manera práctica y accesible, creando herramientas que amplifiquen las capacidades humanas en lugar de reemplazarlas.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-code"></i>
+                                <span>Código limpio y mantenible</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Integración de IA práctica</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Experiencias responsive</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Performance optimizada</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Hablemos de tu proyecto</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="about-visual">
+                        <div class="profile-container">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="profile-frame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Section -->
+        <section id="stack" class="section stack">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span>
+                    Stack tecnológico
+                </h2>
+                <div class="stack-grid">
+                    <div class="stack-category">
+                        <div class="category-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">JavaScript (ES6+)</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">TypeScript</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">React / Next.js</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">HTML5 / CSS3</span>
+                                <span class="tech-level">Experto</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Tailwind CSS</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">Node.js</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Python</span>
+                                <span class="tech-level">Intermedio-Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Express / FastAPI</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">PostgreSQL / MongoDB</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">REST APIs / GraphQL</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="category-header">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI & ML</h3>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">OpenAI API</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">LangChain</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">TensorFlow / PyTorch</span>
+                                <span class="tech-level">Básico-Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Hugging Face</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Prompt Engineering</span>
+                                <span class="tech-level">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & DevOps</h3>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">Git / GitHub</span>
+                                <span class="tech-level">Experto</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Docker</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">AWS / Vercel</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">CI/CD Pipelines</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Figma</span>
+                                <span class="tech-level">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">03.</span>
+                    Proyectos destacados
+                </h2>
+                
+                <!-- Featured Project -->
+                <div class="featured-project">
+                    <div class="project-header">
+                        <span class="project-label">Proyecto destacado</span>
+                        <h3>KinetixFitt</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>Plataforma integral de fitness que combina seguimiento de ejercicios, planificación de rutinas y análisis de progreso utilizando tecnologías modernas de desarrollo web.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Sistema de seguimiento de ejercicios</li>
+                                <li><i class="fas fa-check"></i> Planificación personalizada de rutinas</li>
+                                <li><i class="fas fa-check"></i> Dashboard de progreso y estadísticas</li>
+                                <li><i class="fas fa-check"></i> Interfaz responsive y moderna</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">REST API</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Ezequiell-26/KinetixFitt" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-github"></i>
+                                <span>Ver en GitHub</span>
+                            </a>
+                            <a href="#" class="btn btn-secondary" onclick="return false;">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card featured">
+                        <div class="project-card-header">
+                            <h3>KinetixFitt</h3>
+                            <span class="project-status">Active</span>
+                        </div>
+                        <p class="project-summary">
+                            Plataforma de fitness con seguimiento de ejercicios, rutinas personalizadas y dashboard de progreso.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag-small">React</span>
+                            <span class="tech-tag-small">Node.js</span>
+                            <span class="tech-tag-small">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ezequiell-26/KinetixFitt" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link disabled" onclick="return false;" aria-label="Demo no disponible">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>AIFORGE</h3>
+                            <span class="project-status">In Development</span>
+                        </div>
+                        <p class="project-summary">
+                            Herramienta de desarrollo asistida por IA para generar código, documentar funciones y optimizar workflows de desarrollo.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">OpenAI API</span>
+                            <span class="tech-tag-small">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ezequiell-26" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>Portfolio Web</h3>
+                            <span class="project-status">Live</span>
+                        </div>
+                        <p class="project-summary">
+                            Portfolio profesional interactivo con animaciones 3D optimizadas, diseño responsive y experiencia de usuario premium.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag-small">JavaScript</span>
+                            <span class="tech-tag-small">Three.js</span>
+                            <span class="tech-tag-small">GSAP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ezequiell-26/PORTFOLIO" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link" aria-label="Ver sitio en vivo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>AI Chat Assistant</h3>
+                            <span class="project-status">Prototype</span>
+                        </div>
+                        <p class="project-summary">
+                            Asistente conversacional impulsado por modelos de lenguaje grandes con contexto personalizado y memoria de conversación.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">LangChain</span>
+                            <span class="tech-tag-small">React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ezequiell-26" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-cta">
+                    <a href="https://github.com/Ezequiell-26" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        <span>Ver más proyectos en GitHub</span>
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Contactar</span>
-                    </a>
                 </div>
             </div>
-            <div class="hero-3d">
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
-                    <div class="shape shape-4"></div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll para explorar</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span>
-                Sobre Mí
-            </h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user-astronaut"></i>
-                        </div>
-                        <div class="experience-badge">
-                            <span class="number">5+</span>
-                            <span class="text">Años de Experiencia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3>¡Hola! Soy un desarrollador apasionado por crear experiencias web únicas</h3>
-                    <p>Especializado en desarrollo frontend con un enfoque en diseño interactivo y experiencias inmersivas. Me encanta combinar tecnología creativa con funcionalidad para construir productos digitales que destaquen.</p>
-                    <p>Mi enfoque se centra en crear interfaces intuitivas y visualmente impactantes que no solo se vean bien, sino que también proporcionen una experiencia de usuario excepcional.</p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span class="stat-number" data-target="50">0</span>
-                            <span class="stat-label">Proyectos Completados</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-smile"></i>
-                            <span class="stat-number" data-target="30">0</span>
-                            <span class="stat-label">Clientes Felices</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-coffee"></i>
-                            <span class="stat-number" data-target="999">0</span>
-                            <span class="stat-label">Tazas de Café</span>
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span>
+                    Experiencia & evolución
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">Actualidad</span>
+                            <h3>Desarrollo de Productos AI</h3>
+                            <p class="timeline-description">
+                                Creación de herramientas y aplicaciones que integran inteligencia artificial de manera práctica, enfocándome en soluciones que amplifican las capacidades humanas.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">AI Integration</span>
+                                <span class="tag">Product Development</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span>
-                Habilidades
-            </h2>
-            <div class="skills-container">
-                <div class="skills-left">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Frontend</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="HTML/CSS" data-level="95">
-                                <div class="skill-info">
-                                    <span>HTML/CSS</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="JavaScript" data-level="90">
-                                <div class="skill-info">
-                                    <span>JavaScript</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="React" data-level="88">
-                                <div class="skill-info">
-                                    <span>React</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Three.js" data-level="85">
-                                <div class="skill-info">
-                                    <span>Three.js</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">2023 - Presente</span>
+                            <h3>Proyectos Open Source</h3>
+                            <p class="timeline-description">
+                                Desarrollo y mantenimiento de proyectos de código abierto, incluyendo plataformas de fitness, herramientas de desarrollo y experimentos con IA.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Open Source</span>
+                                <span class="tag">Community</span>
+                                <span class="tag">GitHub</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skills-center">
-                    <div class="tech-stack-3d">
-                        <div class="orbit-system">
-                            <div class="sun"></div>
-                            <div class="planet planet-1"></div>
-                            <div class="planet planet-2"></div>
-                            <div class="planet planet-3"></div>
-                            <div class="planet planet-4"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skills-right">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-server"></i> Backend & Tools</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="Node.js" data-level="82">
-                                <div class="skill-info">
-                                    <span>Node.js</span>
-                                    <span>82%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Python" data-level="78">
-                                <div class="skill-info">
-                                    <span>Python</span>
-                                    <span>78%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Git" data-level="90">
-                                <div class="skill-info">
-                                    <span>Git</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="UI/UX" data-level="85">
-                                <div class="skill-info">
-                                    <span>UI/UX Design</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tech-icons">
-                <div class="tech-icon"><i class="fab fa-html5"></i></div>
-                <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-icon"><i class="fab fa-js"></i></div>
-                <div class="tech-icon"><i class="fab fa-react"></i></div>
-                <div class="tech-icon"><i class="fab fa-node"></i></div>
-                <div class="tech-icon"><i class="fab fa-python"></i></div>
-                <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
-                <div class="tech-icon"><i class="fab fa-figma"></i></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span>
-                Proyectos Destacados
-            </h2>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="3d">3D/Interactive</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">2022 - 2023</span>
+                            <h3>Especialización en Desarrollo Web Moderno</h3>
+                            <p class="timeline-description">
+                                Profundización en frameworks modernos de JavaScript, arquitecturas escalables y mejores prácticas de desarrollo frontend y backend.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">TypeScript</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Plataforma de comercio electrónico con carrito de compras y panel de administración</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="3d">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-vr-cardboard"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Experiencia VR Interactiva</h3>
-                        <p>Entorno virtual inmersivo creado con Three.js y WebGL</p>
-                        <div class="project-tags">
-                            <span class="tag">Three.js</span>
-                            <span class="tag">WebGL</span>
-                            <span class="tag">GSAP</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Fitness Tracking App</h3>
-                        <p>Aplicación móvil para seguimiento de ejercicios y nutrición</p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Redux</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Dashboard Analytics</h3>
-                        <p>Panel de control con visualización de datos en tiempo real</p>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">WebSocket</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="3d">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Configurador 3D de Productos</h3>
-                        <p>Herramienta interactiva para personalizar productos en 3D</p>
-                        <div class="project-tags">
-                            <span class="tag">Three.js</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Blender</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Mobile Gaming App</h3>
-                        <p>Juego móvil multijugador con sistema de rankings</p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">Photon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                Contacto
-            </h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>¿Trabajamos juntos?</h3>
-                    <p>Estoy siempre interesado en nuevos proyectos y oportunidades. ¡No dudes en contactarme!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>tu.email@example.com</span>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">2021 - 2022</span>
+                            <h3>Inicios en Desarrollo Full-Stack</h3>
+                            <p class="timeline-description">
+                                Comienzo del viaje en el desarrollo de software, aprendiendo fundamentos de programación, estructuras de datos y creación de aplicaciones web completas.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Python</span>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+34 123 456 789</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Madrid, España</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">05.</span>
+                    Contacto
+                </h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>¿Trabajamos juntos?</h3>
+                        <p>
+                            Estoy siempre abierto a discutir nuevos proyectos, oportunidades de colaboración o simplemente conversar sobre tecnología. Si tienes una idea o proyecto en mente, no dudes en contactarme.
+                        </p>
+                        <div class="contact-methods">
+                            <a href="mailto:tu.email@example.com" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://github.com/Ezequiell-26" target="_blank" rel="noopener noreferrer" class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xbjnqlya" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" required>
                             <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" required>
                             <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" required></textarea>
                             <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required autocomplete="off"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <span>Enviar Mensaje</span>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span>Enviar mensaje</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
+                        <div class="form-status" aria-live="polite"></div>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Portfolio Profesional. Diseñado y desarrollado con <i class="fas fa-heart"></i></p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-name">Matías Ezequiel González</span>
+                    <span class="footer-role">Full-Stack Developer · AI Product Builder</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Ezequiell-26" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:tu.email@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> Matías Ezequiel González. Construido con código y café.</p>
+            </div>
         </div>
     </footer>
 
